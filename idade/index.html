@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade</title>
+</head>
+<body>
+    <h1> Verificação de idade.</h1>
+    Qual a sua idade? <input type="number"name="ida"id="ida">
+    <input type="button" value="Verificar"onclick=verificar()>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(){
+            var idade=window.document.getElementById("ida")
+            var res=window.document.getElementById("res")
+            var id=Number(idade.value)
+            res.innerHTML=`<p>Sua idade é <strong>${id}</strong> anos.</p>`
+            if(id>18){
+               res.innerHTML+="<strong><p>Você é maior de idade.</p></strong>" 
+            }else{
+                res.innerHTML+="<p><strong>Você é menor de idade.</p></strong>"
+            }
+
+            
+             }
+            
+            
+        
+    </script>
+    
+</body>
+</html>
