@@ -1,0 +1,22 @@
+
+function tabuada(){
+    var num= document.getElementById("txtn")
+    var tab= document.getElementById("selTab")
+    if(num.value.length==0){
+        alert("Por favor digite um numero")
+        
+    }else{
+        var n=Number(num.value);
+        var c=1;
+        tab.innerHTML=" "
+        while(c<=10){
+            var item= document.createElement("option")
+            item.text=`${n}*${c}=${n*c}`
+            tab.appendChild(item)
+            c++
+
+        }
+        
+    }
+
+}
